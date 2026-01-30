@@ -1,27 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-  <a href="https://www.google.com/">구글로가기</a>
-<body>
-    <h1>나는 할 수 있다능</h1>
-    <h2>나는 닭가슴살이 좋다</h2>
-    <h3>나는 오꾸닭 순살이 좋다</h3>
-    <h4>배가 고프다</h4>
-    <h1>순살크런치는 겉바속촉 살살 녹는다</h1>
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MDdfMzAw%2FMDAxNjI1NjYzNjEwOTI3.cNeDlL1s05ipOcI3iqG9t0CZMWfCMnjj1InKBerYllcg.vWbFFUvY2AD7j360rijdexBWgnJCUYglm_x6t3C0C58g.JPEG.skfo2961%2FIMG_9211.jpg&type=a340" alt="크런치" width="300">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>개발 기초 정리</title>
 
+  <style>
+    /* 초보자 느낌: 기본 폰트 + 기본 여백 + 심플한 박스 */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    h1 { margin-bottom: 6px; }
+    .desc { color: #555; margin-top: 0; }
+
+    .box {
+      border: 1px solid #ddd;
+      padding: 12px;
+      margin: 12px 0;
+      background: #fafafa;
+    }
+
+    code {
+      background: #f1f1f1;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background: #f1f1f1;
+      padding: 10px;
+      overflow: auto;
+      font-size: 13px;
+    }
+
+    .small { font-size: 13px; color: #555; }
+
+    button {
+      padding: 8px 10px;
+      border: 1px solid #999;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #f3f3f3;
+    }
+
+    .result {
+      margin-top: 8px;
+      padding: 8px;
+      border: 1px dashed #aaa;
+      background: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>내가 이해한 개발 기초 정리</h1>
+  <p class="desc">HTML / CSS / JavaScript / 웹 기본 개념을 내가 이해한 방식으로 정리</p>
+
+  <div class="box">
+    <h2>1) HTML이란?</h2>
+    <p>
+      웹 페이지의 <b>구조(뼈대)</b>를 만드는 언어.
+      제목, 문단, 이미지, 버튼 같은 “요소”를 배치한다.
+    </p>
     <ul>
-        <p><b>다른 것도 맛있다</b></p>
-        <li>순살크런치</li>
-        <li>로스트그릴드</li>
-        <li>요거닭</li>
+      <li><code>&lt;h1&gt;</code> : 큰 제목</li>
+      <li><code>&lt;p&gt;</code> : 문단</li>
+      <li><code>&lt;img&gt;</code> : 이미지</li>
+      <li><code>&lt;a&gt;</code> : 링크</li>
+      <li><code>&lt;button&gt;</code> : 버튼</li>
     </ul>
 
-    <input type="text" placeholder="이름을 입력해주세요">
-    <button>확인</button>
+    <p><b>예시</b></p>
+    <pre><code>&lt;h1&gt;안녕하세요&lt;/h1&gt;
+&lt;p&gt;이건 문단입니다&lt;/p&gt;
+&lt;button&gt;클릭&lt;/button&gt;</code></pre>
+  </div>
+
+  <div class="box">
+    <h2>2) CSS란?</h2>
+    <p>
+      HTML로 만든 구조에 <b>디자인(스타일)</b>을 입히는 언어.
+      글자 크기, 색, 간격, 정렬 등을 바꾼다.
+    </p>
+    <ul>
+      <li>선택자(Selector): 누구를 꾸밀지 정함 (예: <code>p</code>, <code>.box</code>)</li>
+      <li>속성(Property): 무엇을 바꿀지 (예: <code>color</code>, <code>margin</code>)</li>
+    </ul>
+
+    <p><b>예시</b></p>
+    <pre><code>p {
+  color: #333;
+}
+
+.box {
+  border: 1px solid #ddd;
+  padding: 12px;
+}</code></pre>
+  </div>
+
+  <div class="box">
+    <h2>3) JavaScript란?</h2>
+    <p>
+      웹 페이지에 <b>동작</b>을 넣는 언어.
+      버튼 클릭, 입력값 처리처럼 사용자의 행동에 반응할 수 있다.
+    </p>
+
+    <p><b>미니 실습</b>: 버튼을 누르면 숫자가 올라감</p>
+    <button id="plusBtn">+1</button>
+    <div class="result">현재 숫자: <span id="count">0</span></div>
+
+    <p class="small">※ JS는 “이벤트(클릭)”가 발생했을 때 화면을 바꾸는 식으로 동작한다.</p>
+
+    <p><b>예시 코드(개념)</b></p>
+    <pre><code>button.addEventListener("click", function () {
+  // 클릭하면 실행
+});</code></pre>
+  </div>
+
+  <div class="box">
+    <h2>4) 웹은 어떻게 동작하나?</h2>
+    <p>
+      웹은 기본적으로 <b>요청(Request)과 응답(Response)</b>으로 동작한다.
+    </p>
+    <ul>
+      <li>사용자가 URL(주소)을 입력한다</li>
+      <li>브라우저가 서버에 “페이지 주세요” 요청을 보낸다</li>
+      <li>서버가 HTML/CSS/JS 파일을 응답한다</li>
+      <li>브라우저가 파일을 조합해서 화면을 만든다</li>
+    </ul>
+
+    <p class="small">
+      내 컴퓨터에서만 열면(<code>file://</code>) 다른 사람은 못 봄.  
+      공유하려면 웹에 올려서(<code>https://</code>) 주소(URL)를 만들어야 함.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>내 결론(한 줄)</h2>
+    <p>
+      HTML은 구조, CSS는 꾸미기, JavaScript는 동작.  
+      웹은 요청/응답으로 파일을 받아서 브라우저가 화면을 만든다.
+    </p>
+  </div>
+
+  <p class="small">
+    캡쳐 제출 팁: 제목이랑 1~3번 박스가 같이 보이게 화면을 맞춰서 1장 찍으면 깔끔함.
+  </p>
+
+  <script>
+    // 초보자 느낌: 카운트 올리기
+    var plusBtn = document.getElementById("plusBtn");
+    var countEl = document.getElementById("count");
+    var num = 0;
+
+    plusBtn.addEventListener("click", function () {
+      num = num + 1;
+      countEl.textContent = num;
+    });
+  </script>
 </body>
 </html>
