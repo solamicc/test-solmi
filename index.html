@@ -1,170 +1,61 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>개발 기초 정리</title>
-
-  <style>
-    /* 초보자 느낌: 기본 폰트 + 기본 여백 + 심플한 박스 */
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 20px;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    h1 { margin-bottom: 6px; }
-    .desc { color: #555; margin-top: 0; }
-
-    .box {
-      border: 1px solid #ddd;
-      padding: 12px;
-      margin: 12px 0;
-      background: #fafafa;
-    }
-
-    code {
-      background: #f1f1f1;
-      padding: 2px 5px;
-      border-radius: 4px;
-    }
-
-    pre {
-      background: #f1f1f1;
-      padding: 10px;
-      overflow: auto;
-      font-size: 13px;
-    }
-
-    .small { font-size: 13px; color: #555; }
-
-    button {
-      padding: 8px 10px;
-      border: 1px solid #999;
-      background: #fff;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #f3f3f3;
-    }
-
-    .result {
-      margin-top: 8px;
-      padding: 8px;
-      border: 1px dashed #aaa;
-      background: #fff;
-    }
-  </style>
 </head>
 
 <body>
-  <h1>내가 이해한 개발 기초 정리</h1>
-  <p class="desc">HTML / CSS / JavaScript / 웹 기본 개념을 내가 이해한 방식으로 정리</p>
 
-  <div class="box">
-    <h2>1) HTML이란?</h2>
-    <p>
-      웹 페이지의 <b>구조(뼈대)</b>를 만드는 언어.
-      제목, 문단, 이미지, 버튼 같은 “요소”를 배치한다.
-    </p>
-    <ul>
-      <li><code>&lt;h1&gt;</code> : 큰 제목</li>
-      <li><code>&lt;p&gt;</code> : 문단</li>
-      <li><code>&lt;img&gt;</code> : 이미지</li>
-      <li><code>&lt;a&gt;</code> : 링크</li>
-      <li><code>&lt;button&gt;</code> : 버튼</li>
-    </ul>
+  <h1>개발 기초 정리</h1>
+  <p>수업에서 배운 HTML 태그와 웹 기본 개념을 정리했다.</p>
 
-    <p><b>예시</b></p>
-    <pre><code>&lt;h1&gt;안녕하세요&lt;/h1&gt;
-&lt;p&gt;이건 문단입니다&lt;/p&gt;
-&lt;button&gt;클릭&lt;/button&gt;</code></pre>
-  </div>
-
-  <div class="box">
-    <h2>2) CSS란?</h2>
-    <p>
-      HTML로 만든 구조에 <b>디자인(스타일)</b>을 입히는 언어.
-      글자 크기, 색, 간격, 정렬 등을 바꾼다.
-    </p>
-    <ul>
-      <li>선택자(Selector): 누구를 꾸밀지 정함 (예: <code>p</code>, <code>.box</code>)</li>
-      <li>속성(Property): 무엇을 바꿀지 (예: <code>color</code>, <code>margin</code>)</li>
-    </ul>
-
-    <p><b>예시</b></p>
-    <pre><code>p {
-  color: #333;
-}
-
-.box {
-  border: 1px solid #ddd;
-  padding: 12px;
-}</code></pre>
-  </div>
-
-  <div class="box">
-    <h2>3) JavaScript란?</h2>
-    <p>
-      웹 페이지에 <b>동작</b>을 넣는 언어.
-      버튼 클릭, 입력값 처리처럼 사용자의 행동에 반응할 수 있다.
-    </p>
-
-    <p><b>미니 실습</b>: 버튼을 누르면 숫자가 올라감</p>
-    <button id="plusBtn">+1</button>
-    <div class="result">현재 숫자: <span id="count">0</span></div>
-
-    <p class="small">※ JS는 “이벤트(클릭)”가 발생했을 때 화면을 바꾸는 식으로 동작한다.</p>
-
-    <p><b>예시 코드(개념)</b></p>
-    <pre><code>button.addEventListener("click", function () {
-  // 클릭하면 실행
-});</code></pre>
-  </div>
-
-  <div class="box">
-    <h2>4) 웹은 어떻게 동작하나?</h2>
-    <p>
-      웹은 기본적으로 <b>요청(Request)과 응답(Response)</b>으로 동작한다.
-    </p>
-    <ul>
-      <li>사용자가 URL(주소)을 입력한다</li>
-      <li>브라우저가 서버에 “페이지 주세요” 요청을 보낸다</li>
-      <li>서버가 HTML/CSS/JS 파일을 응답한다</li>
-      <li>브라우저가 파일을 조합해서 화면을 만든다</li>
-    </ul>
-
-    <p class="small">
-      내 컴퓨터에서만 열면(<code>file://</code>) 다른 사람은 못 봄.  
-      공유하려면 웹에 올려서(<code>https://</code>) 주소(URL)를 만들어야 함.
-    </p>
-  </div>
-
-  <div class="box">
-    <h2>내 결론(한 줄)</h2>
-    <p>
-      HTML은 구조, CSS는 꾸미기, JavaScript는 동작.  
-      웹은 요청/응답으로 파일을 받아서 브라우저가 화면을 만든다.
-    </p>
-  </div>
-
-  <p class="small">
-    캡쳐 제출 팁: 제목이랑 1~3번 박스가 같이 보이게 화면을 맞춰서 1장 찍으면 깔끔함.
+  <h2>HTML이란?</h2>
+  <p>
+    HTML은 웹 페이지의 구조를 만드는 언어이다.
+    제목, 문단, 이미지, 버튼 같은 요소를 화면에 배치할 수 있다.
   </p>
 
-  <script>
-    // 초보자 느낌: 카운트 올리기
-    var plusBtn = document.getElementById("plusBtn");
-    var countEl = document.getElementById("count");
-    var num = 0;
+  <h3>수업에서 배운 태그</h3>
+  <ul>
+    <li>h1 ~ h4 : 제목</li>
+    <li>p : 문단</li>
+    <li>img : 이미지</li>
+    <li>input : 입력창</li>
+    <li>button : 버튼</li>
+    <li>ul, li : 목록</li>
+    <li>a : 링크</li>
+  </ul>
 
-    plusBtn.addEventListener("click", function () {
-      num = num + 1;
-      countEl.textContent = num;
-    });
-  </script>
+  <h2>제목과 문단</h2>
+  <h3>제목 예시</h3>
+  <p>p 태그로 문단을 작성할 수 있다.</p>
+
+  <h4>소제목 예시</h4>
+  <p>제목 태그는 숫자가 커질수록 글자가 작아진다.</p>
+
+  <h2>이미지</h2>
+  <p>img 태그는 src 속성으로 이미지 주소를 넣는다.</p>
+  <img src="https://via.placeholder.com/150">
+
+  <h2>입력창과 버튼</h2>
+  <p>input 태그는 사용자의 입력을 받을 때 사용한다.</p>
+
+  <input type="text" placeholder="이름 입력">
+  <br>
+  <input type="email" placeholder="이메일 입력">
+  <br>
+  <button>확인</button>
+
+  <h2>링크</h2>
+  <p>a 태그는 다른 웹 페이지로 이동할 수 있게 해준다.</p>
+  <a href="https://www.google.com">구글로 이동</a>
+
+  <h2>정리</h2>
+  <p>
+    HTML은 웹 페이지의 구조를 만든다.
+    웹 페이지는 주소(URL)를 통해 불러온다.
+  </p>
+
 </body>
 </html>
