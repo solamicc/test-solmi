@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="whisky.css" />
+  <title>Whisky Notes</title>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Whisky Notes</div>
+      <div class="nav-actions">
+        <a class="link" href="#bottles">Bottles</a>
+        <a class="link" href="#types">Types</a>
+        <a class="link" href="#tasting">Tasting</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1>오늘의 한잔, 깔끔하게.</h1>
+      <p>돈이 없지만 위스키는 마시고 싶어</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="location.href='#bottles'">나의 픽</button>
+                <button class="btn btn-ghost" onclick="location.href='#types'">위스키 종류</button>
+        <button class="btn btn-ghost" onclick="location.href='#tasting'">맛 표현</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 좋아하는 위스키 소개 -->
+    <section id="bottles" class="section">
+      <h2 class="section-title">내가 좋아하는 위스키 Pick 3.</h2>
+
+      <div class="grid">
+        <!-- Hibiki -->
+        <article class="card">
+          <img class="card-img" src="https://i.pinimg.com/736x/9b/73/22/9b73221f763c000f2d58b86e4cb17b9e.jpg" alt="히비키 위스키"/>
+
+          <div class="card-top">
+            <h3>Hibiki Harmony</h3>
+            <span class="badge">Blended</span>
+          </div>
+
+          <p class="muted">
+            비싸지만 너무 맛있다. 부드럽고 밸런스가 뛰어난 일본 블렌디드 위스키.
+          </p>
+
+          <button class="btn btn-small">플로럴 · 스위트 · 밸런스</button>
+        </article>
+
+        <!-- Johnnie Walker Black -->
+        <article class="card">
+          <img class="card-img" src="https://i.pinimg.com/736x/db/63/91/db63916946c629597cad2cfd1a77ee60.jpg" alt="조니워커 블랙라벨"/>
+
+          <div class="card-top">
+            <h3>Johnnie Walker Black</h3>
+            <span class="badge badge-dark">Blended</span>
+          </div>
+
+          <p class="muted">
+            무난하다. 어디서 마셔도 평균 이상은 하는 정석적인 선택.
+          </p>
+
+          <button class="btn btn-small">스모키 · 몰트 · 안정감</button>
+        </article>
+
+        <!-- Golden Blue -->
+        <article class="card">
+          <img class="card-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F003%2F2023%2F12%2F07%2FNISI20231122_0001418912_web_20231122164022_20231207191909524.jpg&type=a340" alt="골든블루"/>
+
+          <div class="card-top">
+            <h3>Golden Blue</h3>
+            <span class="badge badge-outline">Value</span>
+          </div>
+
+          <p class="muted">
+            가성비로 사놓고 먹기 좋다. 데일리로 부담 없다.
+          </p>
+
+          <button class="btn btn-small">라이트 · 스무스 · 데일리</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- 위스키 종류 -->
+    <section id="types" class="section">
+    <h2 class="section-title">위스키 종류</h2>
+
+    <div class="types-table">
+    <div class="type-row">
+      <div class="type-name">Blended</div>
+      <div class="type-desc">여러 증류소의 위스키를 섞어 만든 타입. 맛의 균형이 좋아 입문자에게 무난하다.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-name">Single Malt</div>
+      <div class="type-desc">하나의 증류소에서 만든 몰트 위스키. 개성과 향이 뚜렷한 편이다.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-name">Bourbon</div>
+      <div class="type-desc">옥수수 비율이 높은 미국 위스키. 바닐라·캐러멜 같은 달콤한 풍미가 특징.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-name">Irish</div>
+      <div class="type-desc">부드럽고 깔끔한 스타일이 많다. 위스키가 처음인 사람에게 부담이 적다.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-name">Rye</div>
+      <div class="type-desc">호밀 비율이 높아 스파이시한 맛이 난다. 칵테일 베이스로도 자주 쓰인다.</div>
+    </div>
+   </div>
+ </section>
+
+    <!-- 맛 표현 -->
+   <section id="tasting" class="section">
+  <h2 class="section-title">위스키 맛 표현</h2>
+
+  <div class="tasting-grid">
+    <article class="taste-card">
+      <img src="img/smoky.png" alt="Smoky" />
+      <h4>Smoky</h4>
+      <p>훈연, 이탄 향. 불에 그을린 듯한 스모키함.</p>
+    </article>
+
+    <article class="taste-card">
+      <img src="img/floral.png" alt="Floral" />
+      <h4>Floral&Fruty</h4>
+      <p>꽃향, 과일향 같은 가볍고 섬세한 향. 부드러운 위스키에서 자주 나타난다.</p>
+    </article>
+
+    <article class="taste-card">
+      <img src="img/sweet.png" alt="Sweet" />
+      <h4>Sweet</h4>
+      <p>꿀, 바닐라, 캐러멜 같은 단맛 계열의 풍미.</p>
+    </article>
+
+    <article class="taste-card">
+      <img src="img/spicy.png" alt="Spicy" />
+      <h4>Spicy</h4>
+      <p>후추, 계피처럼 혀를 톡 건드리는 자극적인 맛.</p>
+    </article>
+
+    <article class="taste-card">
+      <img src="img/finish.png" alt="Finish" />
+      <h4>Finish</h4>
+      <p>삼킨 뒤 남는 여운. 길면 롱, 짧으면 숏 피니시.</p>
+    </article>
+  </div>
+ </section>
+
+
+  </main>
+
+  <footer>
+  <p>Copyright &copy; 2026. All rights reserved. </p>
+  </footer>
+
+</body>
+</html>
